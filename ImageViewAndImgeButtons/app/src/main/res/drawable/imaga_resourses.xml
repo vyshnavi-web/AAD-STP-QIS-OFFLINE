@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_pressed="true"
+    android:drawable="@drawable/ic_baseline_tag_faces_green_24"/>
+<item android:state_window_focused="true"
+    android:drawable="@drawable/ic_baseline_tag_faces_blue_24"/>
+    <item android:drawable="@drawable/ic_baseline_tag_faces_black_24"/>
+
+</selector>
