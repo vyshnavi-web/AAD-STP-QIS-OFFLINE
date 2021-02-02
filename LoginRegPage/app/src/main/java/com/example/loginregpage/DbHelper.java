@@ -2,6 +2,7 @@ package com.example.loginregpage;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -44,6 +45,12 @@ public class DbHelper extends SQLiteOpenHelper {
         SQLiteDatabase db=getWritableDatabase();
         long row=db.insert(db_table,null,cn);
         return row;
+    }
+    public Cursor retriveData(){
+        SQLiteDatabase db=getReadableDatabase();
+        Cursor c=db.rawQuery("SELECT * FROM "+db_table,
+                null);
+        return c;
     }
 
 }

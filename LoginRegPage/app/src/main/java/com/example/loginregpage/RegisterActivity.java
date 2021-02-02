@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -29,4 +30,15 @@ DbHelper helper;
         Toast.makeText(this, binding.etRegUsername.getText().toString()
                 +"Inserted Sucessfully: "+row, Toast.LENGTH_SHORT).show();
     }
+
+    public void retriveData(View view) {
+        Cursor c=helper.retriveData();
+        StringBuilder sb=new StringBuilder();
+    while (c.moveToNext()){
+            sb.append(c.getString(1)+"\t");
+            sb.append(c.getString(2)+"\n");
+                    }
+    binding.tvResult.setText(sb);
+    }
+    
 }
