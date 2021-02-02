@@ -19,6 +19,7 @@ ActivityMainBinding binding;
     }
 
     public void loginEvent(View view) {
+
     }
 
     public void registerEvent(View view) {
